@@ -37,23 +37,25 @@ button {
   grid-template-columns: 1fr;
   justify-content: center;
   gap: 16px;
-  margin: 16px;
+  padding: 16px;
+  margin: 0 auto 16px auto;
+  max-width: 900px;
+  box-sizing: border-box;
 }
 
 .movie-container {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   flex-direction: column;
   border: 1px solid black;
 }
 
 .movie-desc {
-  margin: 12px;
+  padding: 16px;
 }
 
 .watch-btn {
-  margin: auto 12px 12px;
-  /* margin-top: auto; */
+  margin: auto auto 16px auto;
 }
 
 .movie-container p {
@@ -75,7 +77,6 @@ button {
 
 @media screen and (min-width: 720px) {
   .nav-bar {
-    padding: 16px;
     margin-bottom: 32px;
   }
 
@@ -91,7 +92,72 @@ button {
 
   .main-content {
     grid-template-columns: repeat(2, 1fr);
-    margin: 32px;
+    padding: 0 32px;
     gap: 32px;
+    margin-bottom: 32px;
   }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-links {
+    gap: 48px
+  }
+
+  .item1 {
+    grid-area: item1;
+  }
+
+  .item2 {
+    grid-area: item2;
+  }
+
+  .item3 {
+    grid-area: item3;
+  }
+
+  .item4 .poster, .item5 .poster, .item6 .poster {
+    grid-area: poster
+  }
+
+  .item4 .movie-desc, .item5 .movie-desc, .item6 .movie-desc {
+    grid-area: movie-desc
+  }
+
+  .item4 .watch-btn, .item5 .watch-btn, .item6 .watch-btn {
+    grid-area: watch-btn
+  }
+
+  .item4, .item5, .item6 {
+    display: grid;
+    grid-area: item4;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+      "poster movie-desc"
+      "poster watch-btn";
+    /* margin-bottom: 48px; */
+  }
+
+  .item5 {
+    grid-area: item5;
+  }
+
+  .item6 {
+    grid-area: item6;
+  }
+
+  .main-content {
+    grid-template-areas:
+      "item1 item1"
+      "item2 item3"
+      "item4 item4"
+      "item5 item5"
+      "item6 item6";
+    padding: 0 48px;
+    gap: 48px;
+  }
+  /* .item1 {
+    display: grid;
+    grid-template-columns: repeat()
+  } */
+
 }
