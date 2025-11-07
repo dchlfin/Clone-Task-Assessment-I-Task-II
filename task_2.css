@@ -1,0 +1,43 @@
+ /* Elements should use the following standard spacing values for margins, padding, and gaps.
+   | Target device | Small spacing | Large spacing |
+   | ------------- | ------------- | ------------- |
+   | Mobile        | `16px`        | `16px`        |
+   | Tablet        | `16px`        | `32px`        |
+   | Desktop       | `16px`        | `48px`        | */
+
+.mobile-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.nav-header h1 {
+  font-size: 2em;
+}
+
+button {
+  font-size: 2em;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.main-content {
+  display: grid;
+  justify-content: center;
+}
+
+.movie-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 16px;
+}
+
+.movie-container p {
+  font-size: 1.5em
+}
+
